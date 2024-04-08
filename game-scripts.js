@@ -283,7 +283,7 @@ GameplayController.prototype.initVariables = function() {
     GameplayController.availableTowerHeight = 200;
     GameplayController.ballRadius = 0.66;
     GameplayController.itemLifeTime = 15; //seconds
-    GameplayController.itemDrownTime = 20; //seconds
+    GameplayController.itemDrownTime = 10; //seconds
     GameplayController.itemFallingTime = 5;
     
     GameplayController.particleCacheSize = 200;
