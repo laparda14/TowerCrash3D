@@ -195,7 +195,7 @@ GameplayController.prototype.restartSession = function() {
         defeatTimer: 0,
         defeatTimerActive: false,
         reviveAppeared: false,
-        reviveUsed: true,
+        reviveUsed: false,
         destroyedItems: 0,
         comboCounter: 0,
         currentBallHitTimestamp: 0,
