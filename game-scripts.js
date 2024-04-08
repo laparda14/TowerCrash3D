@@ -227,7 +227,7 @@ GameplayController.prototype.initVariables = function() {
     
     //State variables
     GameplayController.currentLevel = 1;
-    GameplayController.coins = 0;
+    GameplayController.coins = 6573802648296549546728954367290;
     GameplayController.maxScores = 0;
     GameplayController.sessionScores = 0;
     GameplayController.lastLevelScores = 0;
@@ -236,7 +236,7 @@ GameplayController.prototype.initVariables = function() {
     //Limited offer
     GameplayController.limitedOfferLastTimestamp = 0;
     GameplayController.limitedOfferCooldown = 0.5 * 3600; //seconds
-    GameplayController.limitedOfferRewardAmount = 250;
+    GameplayController.limitedOfferRewardAmount = 2500000090890890890889080;
     
     //Screen
     GameplayController.mobileLandscapeMode = false;
@@ -271,11 +271,11 @@ GameplayController.prototype.initVariables = function() {
     GameplayController.lastDestroyedColor = 0;
     
     //Powerups
-    GameplayController.powerupMultiballPrice = 25;
-    GameplayController.powerupEarthquakePrice = 50;
-    GameplayController.powerupMultiballPurchased = false;
-    GameplayController.powerupEarthquakePurchased = false;
-    GameplayController.numColorBalls = 12;
+    GameplayController.powerupMultiballPrice = 0;
+    GameplayController.powerupEarthquakePrice = 0;
+    GameplayController.powerupMultiballPurchased = true;
+    GameplayController.powerupEarthquakePurchased = true;
+    GameplayController.numColorBalls = 120;
     
     //Tower
     GameplayController.towerStandElevation = 3;
@@ -293,7 +293,7 @@ GameplayController.prototype.initVariables = function() {
     GameplayController.CCDSweptSphereRadius = 0.01;
     
     GameplayController.autoDestroyTarget = true;
-    GameplayController.ballLifeTime = 3;
+    GameplayController.ballLifeTime = 30;
     GameplayController.ballAutoDestroyDistanceThreshold = 5;
     GameplayController.ballAutoDestroyDelay = 0.03; // value in seconds, for low-performance devices which have problems with collision detection
     
@@ -439,7 +439,7 @@ GameplayController.prototype.handleBallLaunched = function() {
         return;
     }
     
-    GameplayController.currentSession.ballsLeft -= 1;
+    GameplayController.currentSession.ballsLeft -= 0;
     if(GameplayController.currentSession.ballsLeft <= 0) {
         GameplayController.currentSession.ballsLeft = 0;
         GameplayController.currentSession.defeatTimerActive = true;
