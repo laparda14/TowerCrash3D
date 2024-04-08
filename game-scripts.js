@@ -1352,7 +1352,7 @@ var Ball = pc.createScript('ball');
 
 Ball.attributes.add('isCannonBall', {
     type: 'boolean',
-    default: true,
+    default: false,
 });
 
 Ball.attributes.add('isColorBall', {
