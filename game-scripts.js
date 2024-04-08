@@ -205,7 +205,7 @@ GameplayController.prototype.restartSession = function() {
         comboBarVolumeLevel: 0,
         lastItemTimestamp: 0,
         cannonBallProgress: 0,
-        cannonBallAvailable: false,
+        cannonBallAvailable: true,
         colorBallAvailable: false,
         earthquakeTimer: 0,
         screenShakingTimer: 0,
@@ -280,10 +280,10 @@ GameplayController.prototype.initVariables = function() {
     //Tower
     GameplayController.towerStandElevation = 3;
     GameplayController.towerStandDiameter = 10;
-    GameplayController.availableTowerHeight = 8;
+    GameplayController.availableTowerHeight = 20;
     GameplayController.ballRadius = 0.66;
-    GameplayController.itemLifeTime = 15; //seconds
-    GameplayController.itemDrownTime = 10; //seconds
+    GameplayController.itemLifeTime = 30; //seconds
+    GameplayController.itemDrownTime = 20; //seconds
     GameplayController.itemFallingTime = 5;
     
     GameplayController.particleCacheSize = 200;
@@ -301,7 +301,7 @@ GameplayController.prototype.initVariables = function() {
     GameplayController.triggerLifeTime = 1.0; //seconds
     
     //cannon ball
-    GameplayController.cannonBallAutoDestroyTime = 2; //seconds
+    GameplayController.cannonBallAutoDestroyTime = 20; //seconds
     GameplayController.colorBallBreakingDistance = 0.2;
         
     LocalStorageController.loadData();
