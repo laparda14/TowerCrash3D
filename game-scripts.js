@@ -470,7 +470,7 @@ GameplayController.prototype.handleCannonballLaunched = function() {
     this.terminateCombo();
     GameplayController.currentSession.defeatTimer = GameplayController.waitBeforeDefeat;
     GameplayController.currentSession.cannonBallProgress = 0;
-    GameplayController.currentSession.cannonBallAvailable = false;
+    GameplayController.currentSession.cannonBallAvailable = true;
     GameplayController.currentSession.usedPowerups.push('Cannonball');
     Apicontroller.trackLevelUpdate({
        "powerups": GameplayController.currentSession.usedPowerups
