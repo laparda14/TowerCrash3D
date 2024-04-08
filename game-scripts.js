@@ -258,9 +258,9 @@ GameplayController.prototype.initVariables = function() {
     GameplayController.cameraDeltaYMobileLandscape = 7.5;
     
     //Gameplay camera
-    GameplayController.cameraToTowerMinDistance = 35;
-    GameplayController.cameraToTowerMaxDistance = 55;
-    GameplayController.cameraToTowerMobileLandscapeDistance = 40;
+    GameplayController.cameraToTowerMinDistance = 20;
+    GameplayController.cameraToTowerMaxDistance = 100;
+    GameplayController.cameraToTowerMobileLandscapeDistance = 70;
     
     //combo
     GameplayController.comboFactor = this.comboFactor || 1.02;
@@ -280,7 +280,7 @@ GameplayController.prototype.initVariables = function() {
     //Tower
     GameplayController.towerStandElevation = 3;
     GameplayController.towerStandDiameter = 10;
-    GameplayController.availableTowerHeight = 20;
+    GameplayController.availableTowerHeight = 200;
     GameplayController.ballRadius = 0.66;
     GameplayController.itemLifeTime = 30; //seconds
     GameplayController.itemDrownTime = 20; //seconds
