@@ -576,7 +576,7 @@ TowerBuilder.attributes.add('numColors', {
 TowerBuilder.attributes.add('towerHeight', {
     title: "Tower Height",
     type: 'number',
-    default: 12
+    default: 30
 });
 
 TowerBuilder.prototype.initialize = function() { 
