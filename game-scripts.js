@@ -279,7 +279,7 @@ GameplayController.prototype.initVariables = function() {
     
     //Tower
     GameplayController.towerStandElevation = 3;
-    GameplayController.towerStandDiameter = 15;
+    GameplayController.towerStandDiameter = 20;
     GameplayController.availableTowerHeight = 10;
     GameplayController.ballRadius = 0.66;
     GameplayController.itemLifeTime = 30; //seconds
