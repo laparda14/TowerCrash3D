@@ -271,8 +271,8 @@ GameplayController.prototype.initVariables = function() {
     GameplayController.lastDestroyedColor = 0;
     
     //Powerups
-    GameplayController.powerupMultiballPrice = 25;
-    GameplayController.powerupEarthquakePrice = 50;
+    GameplayController.powerupMultiballPrice = 0;
+    GameplayController.powerupEarthquakePrice = 0;
     GameplayController.powerupMultiballPurchased = false;
     GameplayController.powerupEarthquakePurchased = false;
     GameplayController.numColorBalls = 12;
