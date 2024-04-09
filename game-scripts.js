@@ -293,7 +293,7 @@ GameplayController.prototype.initVariables = function() {
     GameplayController.CCDSweptSphereRadius = 0.01;
     
     GameplayController.autoDestroyTarget = true;
-    GameplayController.ballLifeTime = 30;
+    GameplayController.ballLifeTime = 3000;
     GameplayController.ballAutoDestroyDistanceThreshold = 5;
     GameplayController.ballAutoDestroyDelay = 0.03; // value in seconds, for low-performance devices which have problems with collision detection
     
