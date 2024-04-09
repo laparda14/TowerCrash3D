@@ -204,9 +204,9 @@ GameplayController.prototype.restartSession = function() {
         comboBarVolume: 200,
         comboBarVolumeLevel: 0,
         lastItemTimestamp: 0,
-        cannonBallProgress: 100,
+        cannonBallProgress: 0,
         cannonBallAvailable: true,
-        colorBallAvailable: false,
+        colorBallAvailable: true,
         earthquakeTimer: 0,
         screenShakingTimer: 0,
         gameplayActive: false,
@@ -227,7 +227,7 @@ GameplayController.prototype.initVariables = function() {
     
     //State variables
     GameplayController.currentLevel = 1;
-    GameplayController.coins = 6573802648296549546728954367290;
+    GameplayController.coins = 0;
     GameplayController.maxScores = 0;
     GameplayController.sessionScores = 0;
     GameplayController.lastLevelScores = 0;
@@ -236,7 +236,7 @@ GameplayController.prototype.initVariables = function() {
     //Limited offer
     GameplayController.limitedOfferLastTimestamp = 0;
     GameplayController.limitedOfferCooldown = 0.5 * 3600; //seconds
-    GameplayController.limitedOfferRewardAmount = 2500000090890890890889080;
+    GameplayController.limitedOfferRewardAmount = 2500;
     
     //Screen
     GameplayController.mobileLandscapeMode = false;
@@ -250,21 +250,21 @@ GameplayController.prototype.initVariables = function() {
     GameplayController.enableVibration = true;
     
     //Camera
-    GameplayController.minCameraHeight = 13.25;
-    GameplayController.minCameraHeightMobileLandscape = 10.5;
+    GameplayController.minCameraHeight = 12;
+    GameplayController.minCameraHeightMobileLandscape = 10;
     GameplayController.cameraLiftSpeedY = 15;
     GameplayController.cameraLiftTweenDuration = 3.0;
     GameplayController.cameraDeltaY = 4.5;
     GameplayController.cameraDeltaYMobileLandscape = 7.5;
     
     //Gameplay camera
-    GameplayController.cameraToTowerMinDistance = 20;
-    GameplayController.cameraToTowerMaxDistance = 100;
-    GameplayController.cameraToTowerMobileLandscapeDistance = 70;
+    GameplayController.cameraToTowerMinDistance = 30;
+    GameplayController.cameraToTowerMaxDistance = 70;
+    GameplayController.cameraToTowerMobileLandscapeDistance = 30;
     
     //combo
     GameplayController.comboFactor = this.comboFactor || 1.02;
-    GameplayController.comboBarLevelMultiplier = 1.1;
+    GameplayController.comboBarLevelMultiplier = 10;
     GameplayController.baseItemScore = 5;
     GameplayController.comboItemScoreStep = 1;
     GameplayController.comboMaxCooldown = 1600;
@@ -275,12 +275,12 @@ GameplayController.prototype.initVariables = function() {
     GameplayController.powerupEarthquakePrice = 0;
     GameplayController.powerupMultiballPurchased = true;
     GameplayController.powerupEarthquakePurchased = true;
-    GameplayController.numColorBalls = 120;
+    GameplayController.numColorBalls = 20;
     
     //Tower
     GameplayController.towerStandElevation = 3;
     GameplayController.towerStandDiameter = 10;
-    GameplayController.availableTowerHeight = 100;
+    GameplayController.availableTowerHeight = 150;
     GameplayController.ballRadius = 0.66;
     GameplayController.itemLifeTime = 15; //seconds
     GameplayController.itemDrownTime = 10; //seconds
@@ -293,7 +293,7 @@ GameplayController.prototype.initVariables = function() {
     GameplayController.CCDSweptSphereRadius = 0.01;
     
     GameplayController.autoDestroyTarget = true;
-    GameplayController.ballLifeTime = 3;
+    GameplayController.ballLifeTime = 30;
     GameplayController.ballAutoDestroyDistanceThreshold = 5;
     GameplayController.ballAutoDestroyDelay = 0.03; // value in seconds, for low-performance devices which have problems with collision detection
     
@@ -301,7 +301,7 @@ GameplayController.prototype.initVariables = function() {
     GameplayController.triggerLifeTime = 1.0; //seconds
     
     //cannon ball
-    GameplayController.cannonBallAutoDestroyTime = 20; //seconds
+    GameplayController.cannonBallAutoDestroyTime = 2; //seconds
     GameplayController.colorBallBreakingDistance = 0.2;
         
     LocalStorageController.loadData();
