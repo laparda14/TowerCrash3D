@@ -628,7 +628,7 @@ TowerBuilder.prototype.buildTowerFromConfig = function(levelConfig) {
     const prefab = this.app.root.findByName("Prefabs").findByName(levelConfig.prefabName);
     const prefabConfig = prefab.script.towerConfig;
     const prefabPosition = prefab.getPosition();
-    const layers = prefab.children;
+    const layers = 100;
     const numLayers = layers.length;
     
     TowerBuilder.setCurrentTowerHeight(levelConfig.towerHeight * numLayers);
