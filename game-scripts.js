@@ -236,7 +236,7 @@ GameplayController.prototype.initVariables = function() {
     //Limited offer
     GameplayController.limitedOfferLastTimestamp = 0;
     GameplayController.limitedOfferCooldown = 0.5 * 3600; //seconds
-    GameplayController.limitedOfferRewardAmount = 250;
+    GameplayController.limitedOfferRewardAmount = 2500;
     
     //Screen
     GameplayController.mobileLandscapeMode = false;
@@ -247,7 +247,7 @@ GameplayController.prototype.initVariables = function() {
     
     //Effects
     GameplayController.screenShakeDurationAfterHit = 0.25;
-    GameplayController.enableVibration = true;
+    GameplayController.enableVibration = false;
     
     //Camera
     GameplayController.minCameraHeight = 13.25;
@@ -258,13 +258,13 @@ GameplayController.prototype.initVariables = function() {
     GameplayController.cameraDeltaYMobileLandscape = 7.5;
     
     //Gameplay camera
-    GameplayController.cameraToTowerMinDistance = 35;
-    GameplayController.cameraToTowerMaxDistance = 55;
-    GameplayController.cameraToTowerMobileLandscapeDistance = 40;
+    GameplayController.cameraToTowerMinDistance = 20;
+    GameplayController.cameraToTowerMaxDistance = 70;
+    GameplayController.cameraToTowerMobileLandscapeDistance = 50;
     
     //combo
     GameplayController.comboFactor = this.comboFactor || 1.02;
-    GameplayController.comboBarLevelMultiplier = 1.1;
+    GameplayController.comboBarLevelMultiplier = 657826543265764352564328496328;
     GameplayController.baseItemScore = 5;
     GameplayController.comboItemScoreStep = 1;
     GameplayController.comboMaxCooldown = 1600;
@@ -279,12 +279,12 @@ GameplayController.prototype.initVariables = function() {
     
     //Tower
     GameplayController.towerStandElevation = 3;
-    GameplayController.towerStandDiameter = 10;
+    GameplayController.towerStandDiameter = 15;
     GameplayController.availableTowerHeight = 8;
     GameplayController.ballRadius = 0.66;
-    GameplayController.itemLifeTime = 15; //seconds
-    GameplayController.itemDrownTime = 10; //seconds
-    GameplayController.itemFallingTime = 5;
+    GameplayController.itemLifeTime = 30; //seconds
+    GameplayController.itemDrownTime = 20; //seconds
+    GameplayController.itemFallingTime = 10;
     
     GameplayController.particleCacheSize = 200;
     GameplayController.particlesPerObject = 11;
@@ -293,7 +293,7 @@ GameplayController.prototype.initVariables = function() {
     GameplayController.CCDSweptSphereRadius = 0.01;
     
     GameplayController.autoDestroyTarget = true;
-    GameplayController.ballLifeTime = 3;
+    GameplayController.ballLifeTime = 30;
     GameplayController.ballAutoDestroyDistanceThreshold = 5;
     GameplayController.ballAutoDestroyDelay = 0.03; // value in seconds, for low-performance devices which have problems with collision detection
     
@@ -301,7 +301,7 @@ GameplayController.prototype.initVariables = function() {
     GameplayController.triggerLifeTime = 1.0; //seconds
     
     //cannon ball
-    GameplayController.cannonBallAutoDestroyTime = 2; //seconds
+    GameplayController.cannonBallAutoDestroyTime = 5; //seconds
     GameplayController.colorBallBreakingDistance = 0.2;
         
     LocalStorageController.loadData();
