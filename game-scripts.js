@@ -275,7 +275,7 @@ GameplayController.prototype.initVariables = function() {
     GameplayController.powerupEarthquakePrice = 0;
     GameplayController.powerupMultiballPurchased = true;
     GameplayController.powerupEarthquakePurchased = true;
-    GameplayController.numColorBalls = 20;
+    GameplayController.numColorBalls = 1;
     
     //Tower
     GameplayController.towerStandElevation = 3;
