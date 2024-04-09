@@ -1460,16 +1460,13 @@ Ball.prototype.update = function(dt) {
             }
             if(this.entity.autoDestroyTimer <= 0) {  
                 if(this.isCannonBall) {
-                    this.entity.destroy();
                     return;
                 } else if(this.isColorBall) {
                     this.app.fire("colorball:break", this.entity.getPosition().clone(), this.entity.targetObject, this.entity.rigidbody.linearVelocity.clone());
-                    this.entity.destroy();
                     return;
                 } else if(this.entity.targetObject && Math.abs(this.entity.flightTimer - this.entity.calculatedFlightTime) < (this.entity.autoDestroyMinDistanceToTarget / this.entity.initialSpeed) * 3) {
                     console.log("Auto destroy ");
                     this.app.fire("tower:hit", this.entity.targetObject);
-                    this.entity.destroy();
                     return;
                 }
             }
@@ -1477,7 +1474,6 @@ Ball.prototype.update = function(dt) {
         
         this.entity.lifeTimer -= dt;
         if(this.entity.lifeTimer <= 0) {
-            this.entity.destroy();
         }
     }
 };
@@ -1545,7 +1541,6 @@ Ball.prototype.onCollisionStart = function(result) {
     if (result.other.parent && result.other.parent.name === "Tower" && result.other.active && result.other.rigidbody) {
         if(result.other.materialIndex === this.entity.materialIndex || this.entity.launched) {
             this.app.fire("tower:hit", result.other);
-            this.entity.destroy();
         } else {
             // console.log('Miss');
             this.app.fire("audio:play", Math.random() < 0.5 ? "bounce01" : "bounce02");
