@@ -1676,10 +1676,8 @@ Item.prototype.killItem = function(delay, levelCompleted) {
                 // this.entity.rigidbody.teleport(position.x + pc.math.random(-100, 100), position.y - 1000, position.z + pc.math.random(-100, 100));
                 // this.entity.killTime = new Date().getTime() + 100;
                 this.removeFromTower();
-                this.entity.destroy();
             } else {
                  this.removeFromTower();
-                 this.entity.destroy();
             }
        }  
    });
@@ -1695,8 +1693,7 @@ Item.prototype.update = function(dt) {
         this.entity.rigidbody.linearVelocity.set(vel.x * 0.99, vel.y, vel.z * 0.99);
       
         this.entity.drownTimer -= dt;
-        if(this.entity.drownTimer <= 0) {
-            this.entity.destroy();            
+        if(this.entity.drownTimer <= 0) {     
         }
         
     } else if(this.entity.floating) {
@@ -1784,7 +1781,6 @@ Item.prototype.onCollisionStart = function(result) {
     /* hit the ground */
     if(result.other.name.indexOf("Ground") != -1) {
         this.entity.collision.off('collisionstart', this.onCollisionStart, this);
-        this.entity.destroy();
     }
 };
 
