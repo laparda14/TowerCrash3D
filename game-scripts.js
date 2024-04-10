@@ -1676,6 +1676,7 @@ Item.prototype.killItem = function(delay, levelCompleted) {
                 // this.entity.rigidbody.teleport(position.x + pc.math.random(-100, 100), position.y - 1000, position.z + pc.math.random(-100, 100));
                 // this.entity.killTime = new Date().getTime() + 100;
                 this.removeFromTower();
+                 this.entity.destroy();
             } else {
                  this.removeFromTower();
             }
